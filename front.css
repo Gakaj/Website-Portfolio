@@ -2,8 +2,8 @@
     width: 600px;               /* Sets the width of the box */
     background-color: #3a3f47;  
     box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    padding: 25px;              /* Adds space inside the box around the text */
-    margin: 0 auto;               /* Adds space outside the box */
+    padding:25px;              /* Adds space inside the box around the text */
+    margin: 0 ;               /* Adds space outside the box */
     border-radius: 12px;         /* Optional: Rounds the corners of the box */
 }
 
@@ -12,11 +12,88 @@
     line-height: 1.6;
 }
 
-nav { 
-    margin-bottom: 40px;
+
+
+/* dropdown menu css */
+.dropdown {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+}
+.dropdown button { /* Home button dropdown */
+    background-color: rgba(109, 108, 107, 0.838); 
+    position: relative;
+    display: flex;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer; /* cursor changes to pointer when hovering. */
+    border-radius: 12px;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+
 }
 
-nav a { 
-    color: white;
-    margin-right: 20px;
+.dropdown a { 
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    text-decoration: none;
+    color: black;
+    padding: 15px 20px;
+    transition: 0.5s ease;
+}
+
+.dropdown a:hover { 
+    background-color: bisque;
+    border-radius: 12px;
+    font-size: large;
+}
+.dropdown .dropdown-content { /* This is the hidden menu hence the display:none */
+    display: none;
+    position : absolute;
+    min-width : 100px;
+    left: 0;
+    z-index: 10000;
+    border-radius: 12px;
+}
+
+.dropdown:hover .dropdown-content { /* Container of links when hovering on menu */
+    display: block;
+    border-top-left-radius: 0px;
+    top: 100%;
+    background-color: #d5cdcd94;
+    box-shadow: 2px 2px 5px hsla(0%, 0%, 0%, 0.8);
+    transition: 0.5s ease;
+    z-index: 9;
+}
+.dropdown .dropdown-content:hover {
+    border-radius: 12px;
+}
+
+.dropdown button:hover { /* When hovering on menu button*/
+    background-color: #ffffff4f;
+    transition: 0.3s ease;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    
+}
+
+
+
+
+.dropdown #menu-icon {
+    width: 30px;
+    height: 30px;
+    
+}
+
+#projects_icon {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    vertical-align: middle;
 }
